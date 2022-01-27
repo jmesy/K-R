@@ -22,17 +22,23 @@
 
 //The program can be written more coincisely as:
 int main(){
-    // int celsius;
-    // int fahr;
     float celsius, fahr;
     for(fahr=0; fahr<=160; fahr+=20){
         celsius=5*(fahr-32)/9;//No need for 9. here since fahr is float.
         // printf("%d\t%d\t%d\n", fahr, celsius, (9*celsius+5*32)/5);
         printf("%6.1f%6.1f%6.1f\n", fahr, celsius, (9*celsius+5*32)/5.);
         //Print as floating point.
-        //At least 6 wide and 2 after decimal point.
+        //At least 6 wide and 1 after decimal point.
         //Right alignment.
     }
+
+    // Alternative with while loop.
+    // float fahr=0;
+    // while(fahr<=160){
+    //     printf("%6.1f%6.1f\n", fahr, 5*(fahr-32)/9);
+    //     fahr+=20;
+    // }
+    // return 0;
 }
 
 /*
