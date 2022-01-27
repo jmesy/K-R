@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-//This counts the numbers of characters typed before each newline.
+//This counts the number of characters typed before each newline.
 //Ctrl d for EOF.
 int main(){
     int c;
