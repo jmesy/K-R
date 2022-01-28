@@ -20,6 +20,14 @@ int power(int m, int n){
         ++i;
     }
     return r;
+
+    // This is a tad better:
+    // int r=1;
+    // while(n>0){
+    //     r*=m;
+    //     --n;
+    // }
+    // return r;
 }
 
 //From the book.
