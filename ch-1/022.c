@@ -19,9 +19,11 @@ int main(){
     printf("nwhite: %d\n", nwhite);
     printf("nother: %d\n", nother);
     for(i=0; i<9; ++i){
-        // printf("ndigit[%d]=%d\n", i, ndigit[i]);
+        // printf("ndigit[%d]=%d\n", i, ndigit[i]); // Simpler alternative to the double loop.
+        printf("nd[%d] ", i);
         for(int j=0; j<ndigit[i]; ++j){
-            //How do I print *-s determined by ndigit[i] here?
+            printf("*");
         }
+        printf("\n");
     }
 }
