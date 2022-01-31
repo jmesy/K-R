@@ -25,3 +25,11 @@ void to_lower(char s[]){
         s[i]=to_lower_char(s[i]);
     }
 }
+
+// void to_lower(char c[]){
+//     for(int i=0; c[i]!='\0'; ++i){
+//         if('A'<=c[i] && c[i]<='Z'){
+//             c[i]+='a'-'A';
+//         }
+//     }
+// }
