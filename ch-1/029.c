@@ -1,6 +1,17 @@
 #include<stdio.h>
 #define M 1000
 
+// Some context on strings.
+// int main(){
+//     char str[]="String.";
+//     printf("%s\n", str);
+//     for(int i=0; i<strlen(str); ++i){ // strlen requires string.h.
+//         printf("%c\n", str[i]);
+//     }
+//     printf("%d\n", str[strlen(str)]);// This is the NULL character or \0 whose value is 0.
+//     return 0;
+// }
+
 int get_line(char line[], int maxline);
 void copy(char to[], char from[]);
 
@@ -29,8 +40,12 @@ int get_line(char line[], int maxline){//Why have maxline here instead of using 
         line[i++]=c;
         if(c=='\n') break;
     }
-    // if(i==maxline) line[i-1]='\0';//No point. line[M] is '\0'.
-    line[i]='\0';//Null character, which marks the end of the array.
+    if(i==maxline){
+        line[i-1]='\0';//NULL character, which marks the end of the array.
+    }
+    else{
+        line[i]='\0';
+    }
     return i;
 }
 
@@ -50,15 +65,7 @@ int get_line(char line[], int maxline){//Why have maxline here instead of using 
 
 void copy(char to[], char from[]){
     //From the book.
-    // int i=0;
-    // while((to[i]=from[i])!='\0')
-    //     ++i;
-
     int i=0;
-    while(1){
-        to[i]=from[i];
-        if(from[i]=='\0')
-            break;
+    while((to[i]=from[i])!='\0')
         ++i;
-    }
 }
