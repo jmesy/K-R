@@ -1,16 +1,10 @@
+//This doesn't work.
 #include<stdio.h>
 
 void str_cat(char s[], char t[]);
 void str_cat_book(char s[], char t[]);
 
 int main(){
-    int M=100;
-    //This doesn't work.
-    // char s[M];
-    // char t[M];
-    // s[]="concate";
-    // t[]="nate";
-
     char s[]="concate";
     char t[]="nate";
     str_cat(s, t);
