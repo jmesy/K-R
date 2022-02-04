@@ -29,7 +29,7 @@ int main(){
 void i_toa(int x, char t[]){
     int i=0;
     do t[i++]=x%10+'0';
-    while((x/=10)!=0);
+    while(x/=10);
     t[i]='\0';
     //reverse(t);
 }
