@@ -8,6 +8,7 @@ int binsearch(int, int[], int);
 void print_array(int [], int);
 void bubble_sort(int [], int);
 int sort_check(int [], int);
+void print_array_alt(int [], int, char);
 
 int main(){
     int len=3;
@@ -18,7 +19,8 @@ int main(){
     // t[1]=3;
     // t[2]=5;
     bubble_sort(t, len);
-    print_array(t, len);
+    // print_array(t, len);
+    print_array_alt(t, len, 't');
     int r=bin_search(t, x, len);
     // int r=binsearch(x, t, len);
     if(r==-1) printf("%d is not in t[].\n", x);
@@ -71,6 +73,14 @@ void print_array(int t[], int len){
     for(int i=0; i<len; ++i){
         printf("t[%d]=%d\n", i, t[i]);
     }
+}
+
+void print_array_alt(int t[], int len, char c){
+    printf("%c [", c);
+    for(int i=0; i<len; ++i){
+        printf("%d, ", t[i]);
+    }
+    printf("\b\b]\n");
 }
 
 void bubble_sort(int t[], int len){
