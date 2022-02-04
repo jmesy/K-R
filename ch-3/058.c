@@ -41,7 +41,8 @@ int bin_search(int t[], int x, int len){
     t0=0;
     t2=len-1;
     while(t0<=t2){
-        t1=t0+(t2-t0+1)/2;//Casts to int.
+        // t1=t0+(t2-t0+1)/2;//Casts to int.
+        t1=(t0+t2+1)/2;
         if(x==t[t1]) return t1;
         else if(x<t[t1]) t2=t1-1;
         else if(x>t[t1]) t0=t1+1;
