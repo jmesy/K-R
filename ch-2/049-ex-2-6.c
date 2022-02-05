@@ -5,8 +5,10 @@ unsigned setbits(unsigned x, int p, int n, unsigned y);
 void printf_bin(unsigned x);
 
 int main(){
-    unsigned x=0b110100;
-    unsigned y=0b11;
+    // unsigned x=0b110100;
+    // unsigned y=0b11;
+    unsigned int x=0b10101111;
+    unsigned int y=0b11110101;
     x=setbits(x, 4, 3, y);
     printf_bin(x);
     return 0;
@@ -36,3 +38,14 @@ void printf_bin(unsigned x){
     c[i]='\0';
     printf("%s\n", c);
 }
+
+// This has better formatting given that we already know beforehand how many bits we are interested in.
+// void printf_bin(unsigned int x){
+//     int M=8+1;
+//     char t[M];
+//     printf("0b");
+//     for(int i=0; i<M-1; ++i)
+//         t[M-2-i]=((x>>i)&1)+'0';
+//     t[M-1]='\0';
+//     printf("%s\n", t);
+// }
