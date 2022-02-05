@@ -8,7 +8,7 @@ void printf_bin(unsigned x);
 
 int main(){
     unsigned int x=0b110100;
-    x=getbits(x, 4, 3);//0b101.
+    // x=getbits(x, 4, 3);//0b101.
     printf_bin(x);
     return 0;
 }
@@ -21,12 +21,11 @@ void printf_bin(unsigned x){
         return;
     }
     int n_digits=log2(x)+1;//double log2(double).
-    char c[n_digits+1];
+    int M=n_digits+1;// +1 in order to hold '\0' at the end of the array.
+    char c[M];
     int i=0;
-    for(; i<n_digits; ++i){
-        c[n_digits-1-i]=(x&1)+'0';
-        x=x>>1;
-    }
-    c[i]='\0';
+    for(int i=0; i<M-1; ++i)
+        c[M-2-i]=((x>>i)&1)+'0';
+    c[M]='\0';
     printf("%s\n", c);
 }
