@@ -25,6 +25,6 @@ void printf_bin(unsigned x){
     char c[M];
     for(int i=0; i<M-1; ++i)
         c[M-2-i]=((x>>i)&1)+'0';
-    c[M]='\0';
+    c[M-1]='\0';
     printf("%s\n", c);
 }
