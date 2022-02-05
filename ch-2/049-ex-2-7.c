@@ -23,13 +23,11 @@ void printf_bin(unsigned x){
         printf("0\n");
         return;
     }
-    int n_digits=log2(x)+1;//double log2(double).
-    char c[n_digits+1];
-    int i=0;
-    for(; i<n_digits; ++i){
-        c[n_digits-1-i]=(x&1)+'0';
-        x=x>>1;
-    }
-    c[i]='\0';
+    int n_digits=log2(x)+1;
+    int M=n_digits+1;
+    char c[M];
+    for(int i=0; i<M-1; ++i)
+        c[M-2-i]=((x>>i)&1)+'0';
+    c[M-1]='\0';
     printf("%s\n", c);
 }
