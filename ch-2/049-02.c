@@ -16,6 +16,8 @@ int main(){
     t[i]='\0';
     printf("%d\n", i);//32
     printf("%d\n", (int) log2(UINT_MAX)+1);//32
+    unsigned int p=0;
+    printf("%d\n", (int) log2(~p)+1);
     return 0;
 }
 //Compile as gcc reh.c -lm
