@@ -23,7 +23,6 @@ void printf_bin(unsigned x){
     int n_digits=log2(x)+1;//double log2(double).
     int M=n_digits+1;// +1 in order to hold '\0' at the end of the array.
     char c[M];
-    int i=0;
     for(int i=0; i<M-1; ++i)
         c[M-2-i]=((x>>i)&1)+'0';
     c[M]='\0';
