@@ -6,11 +6,13 @@ int str_len(char []);
 int trim(char []);
 
 int main(){
-    char t[]="Stri  ng  ";
+    // char t[]="Stri  ng  ";
+    char t[]=" ";
     // char t[]="Stri  ";
     // tri_m(t);
+    printf("%s*\n", t);
     trim(t);
-    printf("%s\n", t);
+    printf("%s*\n", t);
     return 0;
 }
 
@@ -77,8 +79,12 @@ int str_len(char s[]){
 int trim(char s[]){
     int n;
     for(n=str_len(s)-1; n>=0; --n){
-        if(blank(s[n]))
+        // if(blank(s[n]))
+        //     break;
+        if(s[n]!=' ' && s[n]!='\t' && s[n]!='\n'){
             break;
+        }
     }
+    s[n+1]='\0';
     return n;
 }
