@@ -14,7 +14,6 @@ int main(){
 }
 
 //Possible implementation of a function which prints binary numbers.
-// ??
 void printf_bin(unsigned x){
     printf("%s", "0b");
     if(x==0){
